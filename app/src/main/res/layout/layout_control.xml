@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonMoveLeft"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_upward_24"
+        tools:layout_editor_absoluteX="105dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoveBack"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonHomeXY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoveBack"
+        app:layout_constraintLeft_toRightOf="@id/buttonMoveLeft"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+        app:layout_constraintLeft_toRightOf="@id/buttonHomeXY"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoveBack"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveFront"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/buttonHomeXY"
+        app:layout_constraintLeft_toRightOf="@id/buttonMoveLeft"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/buttonMoveBack"
+        app:layout_constraintLeft_toRightOf="@id/buttonMoveRight"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_upward_24" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonHomeZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_home_24"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoveUp"
+        app:layout_constraintRight_toRightOf="@id/buttonMoveUp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMoveDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24"
+        app:layout_constraintRight_toRightOf="@id/buttonHomeZ"
+        app:layout_constraintTop_toBottomOf="@id/buttonHomeZ"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttonRetract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/label_retract"
+        app:icon="@drawable/ic_baseline_arrow_circle_up_24"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:layout_constraintStart_toEndOf="@id/buttonHomeZ"
+        app:layout_constraintBottom_toTopOf="@id/buttonExtrude"
+        app:layout_constraintTop_toTopOf="@id/buttonHomeZ"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttonExtrude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/label_extrude"
+        app:icon="@drawable/ic_baseline_arrow_circle_down_24"
+        app:shapeAppearanceOverlay="@style/fab_square"
+        app:layout_constraintTop_toBottomOf="@id/buttonRetract"
+        app:layout_constraintStart_toEndOf="@id/buttonHomeZ"
+        app:layout_constraintBottom_toBottomOf="@id/buttonHomeZ"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupExtrusionLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@id/buttonMoveLeft"
+        app:layout_constraintEnd_toEndOf="@id/buttonExtrude"
+        app:layout_constraintTop_toBottomOf="@id/buttonMoveFront"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioExtrusion5mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingEnd="32dp"
+            android:checked="true"
+            android:text="@string/label_5_mm" />
+
+        <RadioButton
+            android:id="@+id/radioExtrusion10mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingEnd="32dp"
+            android:text="@string/label_10_mm" />
+
+        <RadioButton
+            android:id="@+id/radioExtrusion50mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingEnd="32dp"
+            android:text="@string/label_50_mm" />
+
+        <RadioButton
+            android:id="@+id/radioExtrusion120mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingEnd="32dp"
+            android:text="@string/label_120_mm" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

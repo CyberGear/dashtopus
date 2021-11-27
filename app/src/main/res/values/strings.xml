@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Octo Dashboard</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_retract">retract</string>
+    <string name="label_extrude">extrude</string>
+    <string name="label_5_mm">5 mm</string>
+    <string name="label_10_mm">10 mm</string>
+    <string name="label_50_mm">50 mm</string>
+    <string name="label_120_mm">120 mm</string>
+</resources>
